@@ -5,7 +5,7 @@ import {
 } from "mdbreact";
 import { Link } from 'gatsby';
 import CustomNavLink from './customLink';
-import { ReactComponent as Logo } from "../images/light-bulb.svg";
+import { ReactComponent as Logo } from "../images/burger-2.svg";
 
 class NavbarPage extends Component {
   state = {
@@ -18,29 +18,20 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <MDBNavbar color="indigo" dark expand="md">
-        <MDBContainer>
-          <Logo  />
-          <Link to="/" className="navbar-brand">
-            <strong className="ml-3 white-text">Creative Agency</strong></Link>
+      <MDBNavbar color="transparent no-shadow"  expand="md">
+        <MDBContainer>          
+          <Link to="/" className="navbar-brand mr-2">
+            <Logo  className="mr-2" />
+            Burger Now
+          </Link>
           <MDBNavbarToggler name="navbar-toggler" onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            <MDBNavbarNav left>
+            <MDBNavbarNav left className="text-uppercase font-weight-bold text-white">
                 <CustomNavLink to="#!">Home</CustomNavLink>
-                <CustomNavLink to="#!">About</CustomNavLink>
-                <CustomNavLink to="#!">Projects</CustomNavLink>
-                <MDBNavItem>
-                <MDBDropdown>
-                  <MDBDropdownToggle nav caret>
-                    <div className="d-none d-md-inline">About</div>
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu right>
-                    <MDBDropdownItem href="#!">Contact</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Articles</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Testimonials</MDBDropdownItem>
-                  </MDBDropdownMenu>
-                </MDBDropdown>
-              </MDBNavItem>
+                <CustomNavLink to="#!">Menu</CustomNavLink>
+                <CustomNavLink to="#!">Nossa História</CustomNavLink>
+                <CustomNavLink to="#!">Contato</CustomNavLink>
+                <CustomNavLink to="#!">Pedido online</CustomNavLink>                
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <div className="d-flex align-items-center">
