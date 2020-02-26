@@ -22,11 +22,13 @@ class NavbarPage extends Component {
         <MDBContainer>          
           <Link to="/" className="navbar-brand mr-2">
             <Logo  className="mr-2" />
-            Burger Now
+              <div className="text-red font-weight-bold font-32 float-right">
+                Burger now            
+              </div>            
           </Link>
           <MDBNavbarToggler name="navbar-toggler" onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            <MDBNavbarNav left className="text-uppercase font-weight-bold text-white">
+            <MDBNavbarNav left className="text-uppercase font-weight-bold text-white m-auto">
                 <CustomNavLink to="#!">Home</CustomNavLink>
                 <CustomNavLink to="#!">Menu</CustomNavLink>
                 <CustomNavLink to="#!">Nossa História</CustomNavLink>
@@ -34,15 +36,15 @@ class NavbarPage extends Component {
                 <CustomNavLink to="#!">Pedido online</CustomNavLink>                
             </MDBNavbarNav>
             <MDBNavbarNav right>
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center text-white">
                 <CustomNavLink to="#!">
                   <MDBIcon fab icon="facebook" className="ml-1" />
                 </CustomNavLink>
                 <CustomNavLink to="#!">
-                  <MDBIcon fab icon="twitter" className="ml-1" />
+                  <MDBIcon fab icon="instagram" className="ml-1" />
                 </CustomNavLink>
                 <CustomNavLink to="#!">
-                  <MDBIcon fab icon="linkedin" className="ml-1" />
+                  <MDBIcon fab icon="whatsapp" className="ml-1" />
                 </CustomNavLink>
               </div>
             </MDBNavbarNav>
